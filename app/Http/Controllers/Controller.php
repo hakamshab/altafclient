@@ -8,6 +8,8 @@ use Illuminate\Routing\Controller as BaseController;
 
 class Controller extends BaseController
 {
-	
+	public test(){
+		return "hii";
+	}
     use AuthorizesRequests, ValidatesRequests;
 }
