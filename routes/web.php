@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Front\FrontController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::get('home',[FrontController::class,'index']);
+Route::get('recharge',[FrontController::class,'recharge']);
+Route::get('cashier',[FrontController::class,'cashier']);
+Route::get('withdrawl',[FrontController::class,'withdrawl']);
+Route::get('invite',[FrontController::class,'invite']);
+Route::get('profile',[FrontController::class,'profile']);
+Route::fallback(function(){
+	return redirect('home');
 });
