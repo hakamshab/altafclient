@@ -22,6 +22,7 @@ Route::get('user', [UserController::class, 'index']);
 //login
 Route::get('admin', [AuthController::class, 'loginview']);
 Route::any('custom-login', [AuthController::class,'customlogin']);
+Route::any('logout', [AuthController::class,'signOut']);
 //addcase
 Route::get('Add Case-info',[AddcaseController::class,'info']);
 Route::post('Add Case-info',[AddcaseController::class,'create']);

@@ -1,6 +1,6 @@
 @extends('Front.layout.master')
 @section('content')
-<section class="main_title_wraper">
+<section class="main_title_wraper header_boottom">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-lg-12 col-xl-12 cashier">

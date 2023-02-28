@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Contracts\Validation\Validator;
+use Illuminate\Support\Facades\Redirect;
+
 
 class AuthController extends Controller
 {
@@ -21,19 +23,21 @@ class AuthController extends Controller
                 ->where('email',$request->email)
                 ->where('password',$request->password)
                 ->first();
-                
-
 
                 if($check){
+
                     return redirect('user');
 
                 }else{
-                    return "alse";
+
+                  return Redirect::back()->withErrors(['msg' => 'Incorrect Email And password']);
+
                 }
   
     }
     public function dashboard()
     {
+
         if(Auth::check()){
             return view('welcome');
         }
@@ -45,6 +49,7 @@ class AuthController extends Controller
     public function signOut() {
         Session::flush();
         Auth::logout();
+        // return "dsds";
   
         return Redirect('admin');
     }

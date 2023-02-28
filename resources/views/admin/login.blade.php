@@ -20,20 +20,15 @@
                             </div>
                             <div class="col-md-6 col-lg-7 d-flex align-items-center">
                                 <div class="card-body p-4 p-lg-5 text-black">
-                                @if (count($errors) > 0)
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-                                    <form action="{{url('custom-login')}}" method="POST">
+                                <form action="{{url('custom-login')}}" method="POST">
                                         @csrf
+
+                                          
+
                                         <div class="d-flex align-items-center mb-3 pb-1">
                                             <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
-                                            <img src="{{asset('img/Smart Enghlish Logo (1).png')}}" style="width:150px; margin-top:-120px; margin-left: 30%;" alt="" srcset="">
+                                            <!-- <img src="{{asset('img/himaliyas.jpeg')}}" style="width:150px; margin-top:-120px; margin-left: 30%;" alt="" srcset=""> -->
+                                            <h3 style="text-align: center;">Himaliyas</h3>
                                         </div>
                                         <div class="form-outline mb-4">
                                             <input type="email" name="email" id="form2Example17" class="form-control form-control-lg" placeholder="Email" />
@@ -45,13 +40,16 @@
                                             <input type="password" name="password" id="form2Example27" class="form-control form-control-lg" placeholder="Password" />
 
                                         </div>
+                                          @if($errors->any())
+                                            <span style="color: red;padding: 0px;">{{$errors->first()}}</span>
+                                            @endif
 
                                         <div class="pt-1 mb-4">
                                             <button class="btn btn-dark btn-lg btn-block" name="submit" type="submit">Login</button>
                                         </div>
 
-                                        <a class="small text-muted" href="#!">Forgot password?</a>
-                                        <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="registration" style="color: #393f81;">Register here</a></p>
+                                    <!--     <a class="small text-muted" href="#!">Forgot password?</a>
+                                        <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="registration" style="color: #393f81;">Register here</a></p> -->
 
                                     </form>
 

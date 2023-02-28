@@ -1,6 +1,6 @@
 @extends('Front.layout.master')
 @section('content')
-<section class="bg-light">
+<section class="bg-light header_boottom">
     <div class="container">
         <div class="row mb-5">
             <div class="col-md-12 col-sm-12 col-lg-12 col-xl-12">

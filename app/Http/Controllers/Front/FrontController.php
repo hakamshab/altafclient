@@ -29,4 +29,32 @@ class FrontController extends Controller {
     public function profile() {
         return view( 'front/profile' );
     }
+
+    public function plan_record() {
+        return view( 'front/plan_record' );
+    }
+
+    public function account_record() {
+        return view( 'front/account_record' );
+    }
+
+    public function security_center() {
+        return view( 'front/security_center' );
+    }
+
+    public function forget_password() {
+        return view( 'front/forget_password' );
+    }
+
+    public function withdrawal_forget_password() {
+        return view( 'front/withdrawal_forget_password' );
+    }
+
+    public function about() {
+        return view( 'front/about' );
+    }
+
+    public function team() {
+        return view( 'front/team' );
+    }
 }
