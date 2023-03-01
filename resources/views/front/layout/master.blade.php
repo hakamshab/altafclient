@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{asset('Front/css/custom.css')}}">
     <link rel="stylesheet"
         href="{{asset('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')}}">
-    <title>Over</title>
+    <title>Himaliyas</title>
 </head>
 
 <body>
