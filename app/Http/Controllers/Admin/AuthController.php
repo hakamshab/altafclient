@@ -26,7 +26,7 @@ class AuthController extends Controller
 
                 if($check){
 
-                    return redirect('user');
+                    return redirect('product/list');
 
                 }else{
 

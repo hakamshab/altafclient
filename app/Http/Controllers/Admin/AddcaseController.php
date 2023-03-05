@@ -19,7 +19,7 @@ class AddcaseController extends Controller
         $addcash->email = $request->email;
         $addcash->password = $request->password;
         $addcash->save();
-        return redirect('Add Case-list');
+        return redirect('Case-list');
     }
     public function showdata()
     {
@@ -38,12 +38,12 @@ class AddcaseController extends Controller
         $addcash->email = $request->email;
         $addcash->password = $request->password;
         $addcash->update();
-        return redirect('Add Case-list');
+        return redirect('Case-list');
     }
     public function delete($id)
     {
         $addcash = addcash::find($id);
         $addcash->delete();
-        return redirect('Add Case-list');
+        return redirect('Case-list');
     }
 }
